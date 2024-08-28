@@ -8,6 +8,7 @@ body {
 :root{
   --maincolor:#10cab7;
   --second-color:#2c4755;
+  --contaner-size:
 
 }
 .parent{
@@ -98,21 +99,24 @@ position: relative;
 }
 .header .contaner .sidebar .links{
   background-color: var(--second-color);
-  width: 25vw;
-  height:60vh;
-  z-index: 100;
+  width:35vw;
+  height:100vh;
   position: absolute;
-  right: 0;
+  right: -8vw;
+  top: calc(100% + 20px);
   margin: 0px;
   padding: 0px;
   list-style: none;
-  top: calc(100% + 20px);
+  z-index: 10;
   display: none;
+}
+@media (min-width:769px){
+  .header .contaner .sidebar .links{
+    width: 20vw;
+  }
 }
 .header .contaner .sidebar:hover .links{
   display: block;
-  background-color: var(--second-color);
-
 }
 .header .contaner .sidebar .links::before{
   content: '';
@@ -120,12 +124,12 @@ position: relative;
   border-style: solid;
   border-color: transparent transparent var(--second-color) transparent;
   position: absolute;
-  right: 5px;
+  right: 7vw;
   top: -19px;
 }
 .header .contaner .sidebar .links a{
   display: block;
-  font-size: 2vw;;
+  font-size: 100%;
   padding: 15px;
   padding-bottom: 10px;
   text-decoration: none;
